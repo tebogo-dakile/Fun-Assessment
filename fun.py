@@ -10,8 +10,17 @@ def dog_years():
     The dog's age in dog's years is 73
     ```
     """
+def dog_years():
+    human_age = int(input("Input a dog's age in human years: "))
+    if human_age < 1 or human_age > 20:
+        print("Age from 1 - 20")
+    if human_age >= 1 <= 20:
+        i = human_age - 2
+        j = int(i * 4)
+        dog_age = int((2 * 10.5) + j)
+    print(f"Dog age is: {dog_age}")
 
-    #enter your code here
+dog_years()
 
 def fizzbuzz(num):
     """
@@ -24,7 +33,20 @@ def fizzbuzz(num):
     fizzbuzz(15) => "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz"
     """
 
-    #enter your code here
+  
+def fizzbuzz(num):
+    fizzbuzz =[]
+    for i in range(1, num + 1):
+        if i % 3 == 0 and i % 5 == 0:
+            fizzbuzz.append("FizzBuzz")
+        elif i% 3 == 0:
+            fizzbuzz.append("Fizz")
+        elif i % 5 == 0:
+            fizzbuzz.append("Buzz")
+        else:
+            fizzbuzz.append(str(i))
+    print(' '.join(fizzbuzz))
+fizzbuzz(15)
 
     
 
